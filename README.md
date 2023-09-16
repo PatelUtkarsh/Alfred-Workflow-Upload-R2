@@ -6,6 +6,11 @@ This workflow helps you upload a screenshot from your clipboard or local disk to
 
 This workflow is written in Python. It uses Boto3 as the AWS client to upload images.
 
+## Demo
+
+<video src="https://p.utkarsh.workers.dev/demo-upload-workflow-ChW0O.mp4" controls="controls" style="max-width: 730px;">
+</video>
+
 ## Download
 
 https://github.com/PatelUtkarsh/Alfred-Workflow-Upload-R2/releases
