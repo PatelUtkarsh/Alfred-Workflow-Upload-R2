@@ -393,7 +393,7 @@ python upload-s3.py "{query}"</string>
 		<string>shorturl</string>
 	</array>
 	<key>version</key>
-	<string>1.6</string>
+	<string>1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/patelutkarsh</string>
 </dict>
