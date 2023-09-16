@@ -8,8 +8,10 @@ This workflow is written in Python. It uses Boto3 as the AWS client to upload im
 
 ## Demo
 
-<video src="https://p.utkarsh.workers.dev/demo-upload-workflow-ChW0O.mp4" controls="controls" style="max-width: 730px;">
-</video>
+
+https://github.com/PatelUtkarsh/Alfred-Workflow-Upload-R2/assets/5015489/1559487b-f51b-45b4-9785-e92f315df870
+
+
 
 ## Download
 
