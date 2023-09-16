@@ -131,8 +131,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-python upload-s3.py "text"</string>
+				<string>python upload-s3.py "text"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -195,9 +194,7 @@ python upload-s3.py "text"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>echo "{query}"
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-python upload-s3.py "{query}"</string>
+				<string>python upload-s3.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
