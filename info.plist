@@ -310,7 +310,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Questions? Create new issue: https://github.com/PatelUtkarsh/alfred-workflow-upload-to-r2/issues/new</string>
+	<string>Questions? Create new issue: https://github.com/PatelUtkarsh/Alfred-Workflow-Upload-R2/issues/new</string>
 	<key>uidata</key>
 	<dict>
 		<key>192220BB-7B20-4978-84DA-D476454B1B0E</key>
@@ -390,7 +390,7 @@
 		<string>shorturl</string>
 	</array>
 	<key>version</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/patelutkarsh</string>
 </dict>
