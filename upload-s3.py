@@ -17,15 +17,17 @@ from workflow import Workflow
 def get_random_bit(length):
     return ''.join(random.SystemRandom().choice(string.ascii_lowercase + string.ascii_uppercase + string.digits) for _ in range(length))
 
-def capture_text():
+def capture_text(extension):
     # global name 'subprocess' is not defined
     text_file = subprocess.check_output("pbpaste", shell=True)
     random_bit = get_random_bit(10)
-    file_name = 'clip-'+random_bit+'.txt'
+    file_name = 'clip-'+random_bit+'.'+extension
     file_path = os.path.join(tempfile.mkdtemp(), file_name)
     with open(file_path, "wb") as f:
         f.write(text_file)
-    return file_path, file_name, 'text/plain'
+    # return content type based on extension.
+    content_type = mimetypes.MimeTypes().guess_type(file_path)[0]
+    return file_path, file_name, content_type
 
 def capture():
     random_bit = get_random_bit(5)
@@ -54,9 +56,15 @@ def capture():
 
 def main(wf):
     import boto3
+    # print all arguments for debug.
+    #for arg in sys.argv:
+     #   print (arg)
+    #exit()
     # if cmd is pressed we assume it is text capture.
     if sys.argv[1] == "text":
-        file_path, file_name, content_type = capture_text()
+        # extension in 2nd argument
+        extension = sys.argv[2] if len(sys.argv) > 2 else 'txt'
+        file_path, file_name, content_type = capture_text(extension)
     else:
         file_path, file_name, content_type = capture()
     account_id = os.getenv('cf_account_id')
