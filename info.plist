@@ -373,6 +373,8 @@
 		<string>2bde6e2cfbbf6e40c6d5983c1c8af221</string>
 		<key>cf_bucket_name</key>
 		<string>screenshot</string>
+		<key>cf_region</key>
+		<string>apac</string>
 		<key>cf_secret_key</key>
 		<string>509100e91677c2eb61e5e94522a17200297d3c8ca448104bb7606c60399b84fc</string>
 		<key>shorturl</key>
@@ -388,6 +390,7 @@
 		<string>cf_account_id</string>
 		<string>cf_access_key</string>
 		<string>shorturl</string>
+		<string>cf_region</string>
 	</array>
 	<key>version</key>
 	<string>1.1</string>

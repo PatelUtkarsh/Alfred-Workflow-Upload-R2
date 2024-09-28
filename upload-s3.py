@@ -69,11 +69,13 @@ def main(wf):
         file_path, file_name, content_type = capture()
     account_id = os.getenv('cf_account_id')
     bucket_name = os.getenv('cf_bucket_name')
+    region_name = os.getenv('cf_region')
     s3 = boto3.client(
         service_name='s3',
         aws_access_key_id=os.getenv('cf_access_key'),
         aws_secret_access_key=os.getenv('cf_secret_key'),
-        endpoint_url="https://%s.r2.cloudflarestorage.com/%s" %(account_id, bucket_name)
+        endpoint_url="https://%s.r2.cloudflarestorage.com/%s" %(account_id, bucket_name),
+        region_name=region_name
     )
     s3.upload_file(file_path, bucket_name, file_name, ExtraArgs={'ContentType': content_type})
     shorturl = os.getenv('shorturl')

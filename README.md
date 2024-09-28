@@ -27,6 +27,7 @@ Config Environment Variables:
 - cf_account_id: Cloudflare access secret
 - cf_secret_key: Cloudflare access secret
 - cf_bucket_name: Cloudflare bucket name. e.g. `my-bucket-name`
+- cf_region: Cloudflare region (Must be one of: wnam, enam, weur, eeur, apac, auto).
 - tinypng_api_key: Get your tinypng API key from https://tinypng.com/developers to compress images before uploading.
 - shorturl: If you have proxy to bucket via CloudFlare use that url.
 
