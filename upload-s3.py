@@ -25,6 +25,7 @@ def capture_text(extension):
     file_path = os.path.join(tempfile.mkdtemp(), file_name)
     with open(file_path, "wb") as f:
         f.write(text_file)
+
     # return content type based on extension.
     content_type = mimetypes.MimeTypes().guess_type(file_path)[0]
     return file_path, file_name, content_type
@@ -77,7 +78,12 @@ def main(wf):
         endpoint_url="https://%s.r2.cloudflarestorage.com/%s" %(account_id, bucket_name),
         region_name=region_name
     )
-    s3.upload_file(file_path, bucket_name, file_name, ExtraArgs={'ContentType': content_type})
+    # Set explicit content type with UTF-8 encoding for text files
+    extra_args = {'ContentType': content_type}
+    if content_type and content_type.startswith('text/'):
+        extra_args['ContentType'] = content_type + '; charset=utf-8'
+
+    s3.upload_file(file_path, bucket_name, file_name, ExtraArgs=extra_args)
     shorturl = os.getenv('shorturl')
     # if short url is not empty and exists.
     if shorturl:
